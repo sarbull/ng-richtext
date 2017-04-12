@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npm test"
+    "build": "webpack --bail --watch --progress --profile --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/sarbull/ng-richtext/issues"
   },
-  "homepage": "https://github.com/sarbull/ng-richtext#readme"
+  "homepage": "https://github.com/sarbull/ng-richtext#readme",
+  "dependencies": {
+    "angular": "1.6.2"
+  },
+  "devDependencies": {
+    "html-loader": "0.4.4",
+    "webpack": "2.2.1"
+  }
 }
