@@ -10,7 +10,7 @@ directive.NAME = 'ngRichtextEditor';
 function directive($timeout, $filter) {
   return {
     restrict: 'E',
-    templateUrl: ngRichtextEditorTemplate,
+    template: ngRichtextEditorTemplate,
     scope: {
       ngModel: '=ngModel'
     },

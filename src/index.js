@@ -4,6 +4,8 @@ import ngContentEditableDirective from './directives/ngContentEditable.directive
 import ngRichtextEditorDirective from './directives/ngRichtextEditor.directive';
 import ngRichtextToolbarDirective from './directives/ngRichtextToolbar.directive';
 
+import './less/index.less';
+
 const MODULE_NAME = 'ngRichtext';
 
 angular

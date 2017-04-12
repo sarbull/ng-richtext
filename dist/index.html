@@ -2,11 +2,16 @@
 <html ng-app="demoApp">
 <head>
   <meta charset="utf-8"/>
-  <title></title>
+  <title>ngRichText</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="ngRichText.css"/>
 </head>
 <body>
 
 <div ng-controller="DemoController">
+  <code><pre>{{ richtextObj.data }}</pre></code>
+
+
+
   <ng-richtext-toolbar ng-richtext-target="'myEditor'" tools="['bold', 'italic', 'underline']"></ng-richtext-toolbar>
 
   <ng-richtext-editor id="myEditor" ng-model="richtextObj"></ng-richtext-editor>

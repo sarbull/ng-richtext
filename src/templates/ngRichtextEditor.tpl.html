@@ -1,0 +1,10 @@
+<div class="wrappin-on" ng-class="{ focused: focused }">
+  <div class="content"
+       contenteditable="true"
+       ng-content-editable
+       ng-model="ngModel.data"
+       ng-change="updateModel()"
+       spellcheck="false"
+       ng-focus="focused=true"
+       ng-blur="focused=false"></div>
+</div>
