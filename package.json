@@ -1,0 +1,28 @@
+{
+  "name": "ng-richtext",
+  "version": "0.0.1",
+  "description": "AngularJS Richtext Component",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarbull/ng-richtext.git"
+  },
+  "keywords": [
+    "angularjs",
+    "wysiwyg",
+    "javascript",
+    "richtext"
+  ],
+  "author": "Cezar Sirbu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sarbull/ng-richtext/issues"
+  },
+  "homepage": "https://github.com/sarbull/ng-richtext#readme"
+}
