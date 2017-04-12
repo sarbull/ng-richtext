@@ -7,7 +7,7 @@ export default directive;
 directive.$inject = ['$timeout', '$filter'];
 directive.NAME = 'ngRichtextEditor';
 
-directive = ($timeout, $filter) => {
+function directive($timeout, $filter) {
   return {
     restrict: 'E',
     templateUrl: ngRichtextEditorTemplate,
@@ -32,4 +32,4 @@ directive = ($timeout, $filter) => {
       });
     }
   };
-};
+}

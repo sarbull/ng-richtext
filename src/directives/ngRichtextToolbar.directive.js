@@ -1,30 +1,29 @@
 import 'angular';
+import ngRichtextToolbarTemplate from '../templates/ngRichtextToolbar.tpl.html';
 
 export default directive;
-
-import ngRichtextToolbarTemplate from '../templates/ngRichtextToolbar.tpl.html';
 
 directive.NAME = 'ngRichtextToolbar';
 directive.$inject = ['$timeout'];
 
-directive = ($timeout) => {
+function directive($timeout) {
   return {
     restrict: 'E',
-    templateUrl: ngRichtextToolbarTemplate,
+    template: ngRichtextToolbarTemplate,
     scope: {
       ngRichtextTarget: '=',
       tools: '='
     },
     link: ($scope, $element, $attrs) => {
       $timeout(() => {
-        let editor = angular.element('#' + $scope.ngRichtextTarget).find('.wrappin-on');
+        var editor = angular.element('#' + $scope.ngRichtextTarget).find('.wrappin-on');
 
         $scope.action = (tool) => {
           editor.scope().focused = true;
           editor.focus();
           document.execCommand(tool, false, '');
         };
-      })
-    };
-  }
-};
+      });
+    }
+  };
+}

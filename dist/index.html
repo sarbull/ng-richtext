@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+</head>
+<body>
+
+<div ng-controller="DemoController">
+  <ng-richtext-toolbar ng-richtext-target="'myEditor'" tools="['bold', 'italic', 'underline']"></ng-richtext-toolbar>
+
+  <ng-richtext-editor id="myEditor" ng-model="richtextObj"></ng-richtext-editor>
+</div>
+
+
+<script src="ngRichtext.min.js"></script>
+<script>
+  angular
+    .module('demoApp', ['ngRichtext'])
+    .controller('DemoController', ['$scope', function($scope) {
+      $scope.richtextObj = {
+        data: '<p>This is a demo paragraph.</p>'
+      };
+    }]);
+</script>
+</body>
+</html>
