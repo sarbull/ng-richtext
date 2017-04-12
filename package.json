@@ -1,6 +1,6 @@
 {
   "name": "ng-richtext",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "AngularJS Richtext Component",
   "main": "src/index.js",
   "directories": {
