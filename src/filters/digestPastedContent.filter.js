@@ -6,6 +6,6 @@ filter.NAME = 'digestPastedContent';
 
 function filter() {
   return (input) => {
-    return input.replace(/<[^p|^b|^strong|^i|^u|^\/](.*?)>|<\/([^b|^strong|^i|^u|^p].*?)>|<br\/>|<br \/>|style="(.*?)"|style='(.*?)'|class="(.*?)"|class='(.*?)'/g, '');
+    return input.replace(/<[^p|^b|^strong|^i|^u|^\/](.*?)>|<\/([^b|^strong|^i|^u|^p].*?)>|<br\/>|<br \/>|<pre>|<\/pre>|style="(.*?)"|style='(.*?)'|class="(.*?)"|class='(.*?)'/g, '');
   };
 };
