@@ -15,10 +15,15 @@ function directive($timeout, $filter) {
       ngModel: '=ngModel'
     },
     link: ($scope, $element, $attrs) => {
-      $scope.focused = false;
 
-      $element.on('click', () => {
-        angular.element($element).find('.content').focus();
+      $element.find('.content').on('click', () => {
+        angular.element($element.find('.content')).addClass('focused');
+      });
+
+      $element.find('.content').on('blur', (event) => {
+        if (!angular.element(event.relatedTarget).parent().is('ng-richtext-toolbar')) {
+          angular.element($element.find('.content')).removeClass('focused');
+        }
       });
 
       $scope.updateModel = () => {
@@ -26,7 +31,7 @@ function directive($timeout, $filter) {
       };
 
       $element.bind('keydown keypress', (e) => {
-        if(e.which === 13) {
+        if (e.which === 13) {
           window.document.execCommand('formatBlock', false, 'p');
         }
       });

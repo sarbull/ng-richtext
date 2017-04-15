@@ -15,15 +15,9 @@ function directive($timeout) {
       tools: '='
     },
     link: ($scope, $element, $attrs) => {
-      $timeout(() => {
-        var editor = angular.element('#' + $scope.ngRichtextTarget).find('.wrappin-on');
-
-        $scope.action = (tool) => {
-          editor.scope().focused = true;
-          editor.focus();
-          document.execCommand(tool, false, '');
-        };
-      });
+      $scope.action = (tool) => {
+        document.execCommand(tool, false, '');
+      };
     }
   };
 }
